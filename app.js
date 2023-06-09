@@ -13,15 +13,13 @@ addButton.addEventListener("click", () => {
 })
 showTask.addEventListener("click", (e) =>{
     console.log(e.target.className);
-    
+    let lineP = document.querySelector(".pp")
     
 
     if (e.target.type === "checkbox"){
         console.log(e.y);
-        let lineP = document.getElementsByClassName("pp")
-        
-      
         console.log(lineP);
+        lineP.classList.toggle("text-decoration-line-through")
     }
 })
 
