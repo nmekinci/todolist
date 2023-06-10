@@ -27,8 +27,12 @@ showTask.addEventListener("click", (e) => {
       let parentDiv = e.target.parentElement.parentElement;
       let lineP = parentDiv.querySelector("p");
       lineP.classList.toggle("text-decoration-line-through");
+      if (lineP.classList.contains("text-decoration-line-through")) {
+        setTimeout(() => {
+          parentDiv.remove();
+        }, 2000);
     }
-  });
+  }});
 
 
 // *********** functions ***********
