@@ -11,17 +11,24 @@ addButton.addEventListener("click", () => {
     // let checkbox = document.createElement("input");
     userInput.value = ""
 })
-showTask.addEventListener("click", (e) =>{
-    console.log(e.target.className);
-    let lineP = document.querySelector(".pp")
-    
-
-    if (e.target.type === "checkbox"){
-        console.log(e.y);
-        console.log(lineP);
-        lineP.classList.toggle("text-decoration-line-through")
+// showTask.addEventListener("click", (e) =>{
+//     console.log(e.target.className);
+//     let lineP = document.querySelector(".pp")
+//     // let siblingP = e.target.siblings()
+//     // console.log(object);
+//     if (e.target.type === "checkbox"){
+//         console.log(e.y);
+//         console.log(lineP);
+//         lineP.classList.toggle("text-decoration-line-through")
+//     }
+// })
+showTask.addEventListener("click", (e) => {
+    if (e.target.type === "checkbox") {
+      let parentDiv = e.target.parentElement.parentElement;
+      let lineP = parentDiv.querySelector("p");
+      lineP.classList.toggle("text-decoration-line-through");
     }
-})
+  });
 
 
 // *********** functions ***********
